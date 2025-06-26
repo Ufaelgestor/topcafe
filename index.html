@@ -1,10 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Top Café</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ufael Gestor - Marketing Digital para Negócios Locais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        dark: '#1F2937',
+                        darker: '#111827'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .plan-card {
+            transition: all 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .popular-plan {
+            border: 3px solid #10B981;
+        }
+    </style>
 </head>
-<body>
-  <h1>Site do Top Café está no ar! ☕</h1>
+<body class="font-sans">
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 px-4 md:py-32">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Negócios locais precisam vender <span class="text-primary">todos os dias</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Eu te ajudo a fazer isso com marketing que realmente funciona
+            </p>
+            <div class="bg-primary bg-opacity-20 p-4 rounded-lg max-w-2xl mx-auto mb-10 border-l-4 border-primary">
+                <p class="text-lg md:text-xl font-semibold">
+                    Você não precisa contratar vários profissionais. Eu resolvo tudo para você.
+                </p>
+            </div>
+            <a href="https://wa.me/5562992234028?text=Quero%20aumentar%20meu%20faturamento"
+               class="bg-primary hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg transition duration-300 inline-flex items-center">
+                Quero Vender Mais Agora
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 md:py-24 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Tudo o que você precisa em um só lugar
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-primary mb-6">
+                        <i class="fas fa-chess text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Estratégia de vendas locais personalizada</h3>
+                    <p class="text-gray-600">
+                        Desenvolvemos uma estratégia exclusiva para o seu negócio, segmentando clientes locais e criando ofertas irresistíveis.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-primary mb-6">
+                        <i class="fas fa-ad text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Criação de anúncios</h3>
+                    <p class="text-gray-600">
+                        Vídeos, imagens e textos profissionais que convertem, feitos por especialistas em performance e design persuasivo.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-primary mb-6">
+                        <i class="fas fa-chart-line text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Gestão e otimização</h3>
+                    <p class="text-gray-600">
+                        Monitoramento constante das campanhas com ajustes em tempo real para maximizar seu ROI e reduzir custos.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center max-w-4xl mx-auto">
+                <div class="bg-gray-100 p-6 rounded-xl border-l-4 border-primary">
+                    <h4 class="text-lg font-bold mb-3 text-gray-800">
+                        <i class="fas fa-check-circle text-primary mr-2"></i>
+                        Economize tempo e dinheiro
+                    </h4>
+                    <p class="text-gray-700">
+                        Ao invés de contratar designer, editor, gestor de tráfego e copywriter separadamente, eu centralizo tudo com uma equipe especializada e te entrego resultados reais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+                Resultados que Falam
+            </h2>
+            
+            <div class="bg-gray-50 rounded-xl p-8 md:p-12 shadow-sm border border-gray-200">
+                <div class="text-yellow-400 mb-4 text-2xl">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <blockquote class="text-lg md:text-xl italic text-gray-700 mb-6">
+                    "Comecei com medo de investir em marketing, mas o Rafael me mostrou o caminho certo. Em apenas 2 semanas já estava com o WhatsApp cheio de pedidos. Meu restaurante nunca teve tantas vendas!"
+                </blockquote>
+                <div class="flex items-center">
+                    <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                        JG
+                    </div>
+                    <div class="ml-4">
+                        <p class="font-bold text-gray-800">João Gabriel</p>
+                        <p class="text-gray-600">Cliente de Goiânia - Restaurante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 md:py-24 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Escolha o Plano Ideal para Você
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plano Essencial -->
+                <div class="plan-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-center mb-2 text-gray-800">Essencial</h3>
+                        <p class="text-center text-gray-600 mb-6">Para quem está começando</p>
+                        
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 1.500</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>1 plataforma (Instagram OU Google)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>2 criativos por mês</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Planejamento e gestão</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Suporte via WhatsApp</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5562992234028?text=Quero%20o%20Plano%20Essencial"
+                           class="block w-full bg-primary hover:bg-green-600 text-white text-center font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Expansão (Destaque) -->
+                <div class="plan-card bg-white rounded-xl shadow-lg overflow-hidden popular-plan relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                        MAIS POPULAR
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-center mb-2 text-gray-800">Expansão</h3>
+                        <p class="text-center text-gray-600 mb-6">Para quem quer crescimento acelerado</p>
+                        
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 3.000</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Até 3 plataformas (Instagram, Facebook, Google)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>5 criativos por mês</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Relatório mensal + reuniões quinzenais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Suporte estratégico direto</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5562992234028?text=Quero%20o%20Plano%20Expansão"
+                           class="block w-full bg-primary hover:bg-green-600 text-white text-center font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Vendas Totais -->
+                <div class="plan-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-center mb-2 text-gray-800">Vendas Totais</h3>
+                        <p class="text-center text-gray-600 mb-6">Para quem quer máxima performance</p>
+                        
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 4.500</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Todas as plataformas necessárias</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Criativos ilimitados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Copywriting + CRM</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Reuniões semanais e suporte total</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5562992234028?text=Quero%20o%20Plano%20Completo"
+                           class="block w-full bg-primary hover:bg-green-600 text-white text-center font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 md:py-24 px-4 bg-primary text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Vamos aumentar o seu faturamento?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Clique no botão abaixo e receba uma análise gratuita do seu negócio.
+            </p>
+            <a href="https://wa.me/5562992234028?text=Quero%20vender%20mais"
+               class="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg transition duration-300 inline-flex items-center">
+                Quero aumentar meu faturamento
+                <i class="fas fa-whatsapp ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker text-gray-300 py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Ufael Gestor</h4>
+                    <p>
+                        Especialista em marketing digital para negócios locais. Resultados comprovados e estratégias que funcionam.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(62) 99223-4028</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>suporte@ufaelgestor.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Goiânia - GO</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Redes Sociais</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span>WhatsApp</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-instagram mr-2"></i>
+                            <span>@ufaelgestor</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe mr-2"></i>
+                            <span>www.ufaelgestor.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Horário</h4>
+                    <p>Segunda à Sexta</p>
+                    <p>08:00 - 18:00</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>©️ 2025 Ufael Gestor - Todos os direitos reservados.</p>
+                <p class="mt-2">www.ufaelgestor.com.br</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Whatsapp Float Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5562992234028?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os" 
+           class="bg-primary hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition duration-300">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
 </body>
 </html>
